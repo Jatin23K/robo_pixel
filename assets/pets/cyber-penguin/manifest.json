@@ -1,0 +1,35 @@
+{
+  "id": "cyber-penguin-001",
+  "name": "PenByte",
+  "species": "cyber_penguin",
+  "style": "cute pixel cyberpunk",
+  "size": {
+    "base": 32,
+    "scale": 4
+  },
+  "assets": {
+    "spritesheet": "spritesheet.png",
+    "metadata": "spritesheet.json",
+    "license": "0BSD",
+    "source": "Original pixel art generated for this repository."
+  },
+  "animations": {
+    "idle": { "fps": 8, "loop": true },
+    "walk": { "fps": 10, "loop": true },
+    "sleep": { "fps": 4, "loop": true },
+    "react": { "fps": 12, "loop": false }
+  },
+  "personality": {
+    "tone": "calm",
+    "talkFrequency": "low",
+    "role": "focus companion",
+    "dialogue": {
+      "click": ["ぺん、と集中。", "氷みたいに静かに。", "一歩だけ進もう。"],
+      "idle": ["画面の端で待機。", "手を温めよ。", "小休止も戦略。"],
+      "sleep": ["冷たい頭で休も。", "短く目を閉じよ。"],
+      "focus": ["いい滑り出し。", "区切って休もう。", "次は保存から。"],
+      "lateNight": ["夜風モード。", "今日はここまででもいい。"],
+      "lowEnergy": ["燃料を補給。", "水と肩回し。"]
+    }
+  }
+}

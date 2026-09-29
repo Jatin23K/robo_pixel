@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ROBO</title>
+  </head>
+  <body>
+    <div id="app" aria-label="ROBO desktop companion">
+      <div id="drag-region" title="Drag ROBO"></div>
+      <canvas id="pet-canvas" width="440" height="240" aria-label="ROBO Cyber Pet"></canvas>
+      <div id="speech" aria-live="polite"></div>
+      <div id="context-menu" hidden aria-label="Pet context menu">
+        <div id="context-menu-drag-handle" class="context-menu-drag-handle" title="Click and drag to move menu away from ROBO">
+          <span class="context-menu-drag-title">⋮⋮ ANIMATION DECK</span>
+          <button id="context-menu-close" class="context-menu-close-btn" title="Close Menu (Esc)">✕</button>
+        </div>
+        <div class="context-menu-title">System</div>
+        <button class="context-menu-item" data-system="skip-quote">⏭ Skip Daily Quote</button>
+        <div class="context-menu-title" style="margin-top: 4px;">Animations (80 Suite)</div>
+        <button class="context-menu-item" data-fidget="barrel_roll">🔄 1. 360° Barrel Roll</button>
+        <button class="context-menu-item" data-fidget="figure_eight">♾️ 2. Figure-8 Head Roll</button>
+        <button class="context-menu-item" data-fidget="ceiling_bonk">💥 3. Ceiling Bonk</button>
+        <button class="context-menu-item" data-fidget="tickle_wiggle">✨ 4. Head Pet Tickle</button>
+        <button class="context-menu-item" data-fidget="dart_dash">💨 5. High-Speed Dart Dash</button>
+        <button class="context-menu-item" data-fidget="scanline_sweep">📡 6. Visor Scanline Sweep</button>
+        <button class="context-menu-item" data-fidget="thruster_hop">🚀 7. Thruster Flare Hop</button>
+        <button class="context-menu-item" data-fidget="scan_glance">👀 8. Horizontal Eye Scan</button>
+        <button class="context-menu-item" data-fidget="look_up">⬆️ 9. Look Up Glance</button>
+        <button class="context-menu-item" data-fidget="look_down">⬇️ 10. Look Down Glance</button>
+        <button class="context-menu-item" data-fidget="glitch_twitch">⚡ 11. Chromatic Glitch Twitch</button>
+        <button class="context-menu-item" data-fidget="energy_recharge">🔋 12. Energy Recharge Shake</button>
+        <button class="context-menu-item" data-fidget="yawn_stretch">🥱 13. Yawn & Stretch</button>
+        <button class="context-menu-item" data-fidget="energy_low">🫁 14. Standby Breathing Pulse</button>
+        <button class="context-menu-item" data-fidget="victory_jump">🏆 15. Victory Cheer Hop</button>
+        <button class="context-menu-item" data-fidget="sleep_settle">🌙 16. Sleep Settle Descent</button>
+        <button class="context-menu-item" data-fidget="wake_up_snap">☀️ 17. Wake-Up Snap Jolt</button>
+        <button class="context-menu-item" data-test="squash">🪀 18. Ground Squash & Spring</button>
+        <button class="context-menu-item" data-test="flinch">💢 19. Click Flinch Recoil</button>
+        <button class="context-menu-item" data-test="happy_hop">🎉 20. Multi-Click Double Hop</button>
+        <button class="context-menu-item" data-test="typewriter">📜 22. Typewriter Stream Quote</button>
+        <button class="context-menu-item" data-test="walk">🚶 23. Bipedal Walk Stride</button>
+        <div class="context-menu-title" style="margin-top: 4px;">Expressions (11 Minimalist)</div>
+        <button class="context-menu-item" data-expression="neutral">😐 1. Neutral</button>
+        <button class="context-menu-item" data-expression="happy">😊 2. Happy</button>
+        <button class="context-menu-item" data-expression="excited">🤩 3. Excited</button>
+        <button class="context-menu-item" data-expression="thinking">🤔 4. Thinking</button>
+        <button class="context-menu-item" data-expression="confused">❓ 5. Confused</button>
+        <button class="context-menu-item" data-expression="focused">💻 6. Focused</button>
+        <button class="context-menu-item" data-expression="sleepy">😴 7. Sleepy</button>
+        <button class="context-menu-item" data-expression="surprised">😮 8. Surprised</button>
+        <button class="context-menu-item" data-expression="relieved">😌 9. Relieved</button>
+        <button class="context-menu-item" data-expression="angry">😠 10. Frustrated</button>
+        <button class="context-menu-item" data-expression="sad">😢 11. Sad</button>
+        <button class="context-menu-item" data-expression="glitch">⚡ 12. Glitch</button>
+        <div class="context-menu-title" style="margin-top: 4px;">Theme</div>
+        <button class="context-menu-item" data-theme="dark">🌙 Dark Theme</button>
+        <button class="context-menu-item" data-theme="light">☀️ Light Theme</button>
+        <div class="context-menu-title" style="margin-top: 4px;">Activity (15 Modes)</div>
+        <button class="context-menu-item" data-activity="idle">🧍 1. Standby / Idle</button>
+        <button class="context-menu-item" data-activity="coding">💻 2. Coding / Dev</button>
+        <button class="context-menu-item" data-activity="ai_sync">🤖 3. AI Co-Working</button>
+        <button class="context-menu-item" data-activity="reading">📖 4. Reading & Study</button>
+        <button class="context-menu-item" data-activity="writing">✍️ 5. Writing & Notes</button>
+        <button class="context-menu-item" data-activity="design">🎨 6. Design & Creative</button>
+        <button class="context-menu-item" data-activity="gaming">🎮 7. Gaming Mode</button>
+        <button class="context-menu-item" data-activity="music">🎧 8. Music & Audio</button>
+        <button class="context-menu-item" data-activity="watching">🎬 9. Watching Videos</button>
+        <button class="context-menu-item" data-activity="browsing">🌐 10. Web Browsing</button>
+        <button class="context-menu-item" data-activity="chat">💬 11. Chat & Social</button>
+        <button class="context-menu-item" data-activity="call">📹 12. Video Calls</button>
+        <button class="context-menu-item" data-activity="coffee">☕ 13. Coffee Break</button>
+        <button class="context-menu-item" data-activity="sleeping">💤 14. Deep Sleep (AFK)</button>
+        <button class="context-menu-item" data-activity="stress">🔥 15. High Load / Stress</button>
+      </div>
+    </div>
+    <script type="module" src="/src/robo.ts"></script>
+  </body>
+</html>

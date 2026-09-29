@@ -1,0 +1,35 @@
+{
+  "id": "cyber-cat-001",
+  "name": "NekoByte",
+  "species": "cyber_cat",
+  "style": "cute pixel cyberpunk",
+  "size": {
+    "base": 32,
+    "scale": 4
+  },
+  "assets": {
+    "spritesheet": "spritesheet.png",
+    "metadata": "spritesheet.json",
+    "license": "0BSD",
+    "source": "Original pixel art generated for this repository."
+  },
+  "animations": {
+    "idle": { "fps": 8, "loop": true },
+    "walk": { "fps": 10, "loop": true },
+    "sleep": { "fps": 4, "loop": true },
+    "react": { "fps": 12, "loop": false }
+  },
+  "personality": {
+    "tone": "calm",
+    "talkFrequency": "low",
+    "role": "focus companion",
+    "dialogue": {
+      "click": ["ん。ここにいるよ。", "ログ前に深呼吸。", "小さく進めよ。"],
+      "idle": ["すみで見守り中。", "水を一口。", "次の一手だけ。"],
+      "sleep": ["少し休もう。", "まぶたを閉じて。"],
+      "focus": ["nice focus.", "テストして休憩。", "目をゆるめよ。"],
+      "lateNight": ["夜は短く進めよ。", "そろそろ保存しよ。"],
+      "lowEnergy": ["休むのも作業。", "肩を下げよ。"]
+    }
+  }
+}

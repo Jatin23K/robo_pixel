@@ -1,0 +1,49 @@
+{
+  "name": "pixel-pet",
+  "private": true,
+  "version": "0.2.2",
+  "type": "module",
+  "license": "0BSD",
+  "description": "A lightweight cyberpunk pixel desktop pet prototype built with Tauri v2 and TypeScript.",
+  "bin": {
+    "pixel-pet": "bin/pixel-pet.mjs"
+  },
+  "files": [
+    "bin",
+    "dist",
+    "assets/pets",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "assets:generate": "node tools/generate-pixel-assets.mjs",
+    "assets:validate": "node tools/validate-pet-packs.mjs",
+    "assets:check": "npm run assets:generate && npm run assets:validate && git diff --exit-code -- assets/pets",
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc && vite build",
+    "test": "vitest run",
+    "preview:web": "node bin/pixel-pet.mjs",
+    "check": "npm run build && npm run test && cargo check --manifest-path src-tauri/Cargo.toml",
+    "updater:manifest": "node tools/write-updater-manifest.mjs",
+    "release:binary": "tauri build --no-bundle",
+    "release:bundle": "tauri build",
+    "release:hide-helper": "node tools/create-robo-hide.mjs",
+    "tauri": "tauri",
+    "tauri:dev": "tauri dev",
+    "tauri:build": "tauri build",
+    "graphify:setup": "sh scripts/graphify.sh setup",
+    "graphify:update": "sh scripts/graphify.sh update"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^2.0.0",
+    "@tauri-apps/plugin-autostart": "^2.5.1",
+    "@tauri-apps/plugin-process": "^2.3.1",
+    "@tauri-apps/plugin-updater": "^2.10.1"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.0.0",
+    "typescript": "^5.0.0",
+    "vite": "^7.0.0",
+    "vitest": "^4.1.10"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": "kofun-friend-001",
+  "name": "KofunBit",
+  "species": "kofun_friend",
+  "style": "cute pixel cyberpunk",
+  "size": {
+    "base": 32,
+    "scale": 4
+  },
+  "assets": {
+    "spritesheet": "spritesheet.png",
+    "metadata": "spritesheet.json",
+    "license": "0BSD",
+    "source": "Original pixel art generated for this repository."
+  },
+  "animations": {
+    "idle": { "fps": 8, "loop": true },
+    "walk": { "fps": 10, "loop": true },
+    "sleep": { "fps": 4, "loop": true },
+    "react": { "fps": 12, "loop": false }
+  },
+  "personality": {
+    "tone": "gentle",
+    "talkFrequency": "low",
+    "role": "focus companion",
+    "dialogue": {
+      "click": ["ここで見守るよ。", "石室くらい静かに。", "ひとつ積もう。"],
+      "idle": ["ゆっくり進めよ。", "手元を整えよ。", "小さな発掘から。"],
+      "sleep": ["土の中みたいに静か。", "少し休もう。"],
+      "focus": ["よく掘れたね。", "ここで休憩。", "記録を残そう。"],
+      "lateNight": ["夜の発掘は短めに。", "保存して眠ろう。"],
+      "lowEnergy": ["火を落とそう。", "休憩も保存。"]
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Pixel Pet",
+  "version": "0.2.2",
+  "identifier": "dev.local.pixel-pet",
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "createUpdaterArtifacts": true,
+    "publisher": "pixel-pet contributors",
+    "copyright": "Copyright 2026 pixel-pet contributors",
+    "shortDescription": "A lightweight cyberpunk pixel desktop pet.",
+    "longDescription": "Pixel Pet is a small transparent desktop companion with local state, pixel art, and optional on-demand chat.",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.png",
+      "icons/icon.ico",
+      "icons/icon.icns"
+    ]
+  },
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "devUrl": "http://localhost:5173",
+    "beforeBuildCommand": "npm run build",
+    "frontendDist": "../dist"
+  },
+  "plugins": {
+    "updater": {
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IEQ2OTZCNTZDQTM0NDUxNzYKUldSMlVVU2piTFdXMWlpbDBSVEZjUXNVQWFJM0NtZ3lzZncvdHBERlVYWllRbStoRk01YUMvcmcK",
+      "endpoints": [
+        "https://github.com/hjosugi/pixel-pet/releases/latest/download/latest.json"
+      ],
+      "windows": {
+        "installMode": "passive"
+      }
+    }
+  },
+  "app": {
+    "macOSPrivateApi": true,
+    "security": {
+      "csp": null
+    },
+    "windows": [
+      {
+        "label": "main",
+        "title": "ROBO",
+        "width": 440,
+        "height": 240,
+        "resizable": false,
+        "decorations": false,
+        "transparent": true,
+        "alwaysOnTop": true,
+        "skipTaskbar": true,
+        "shadow": false,
+        "center": true
+      }
+    ]
+  }
+}
