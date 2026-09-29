@@ -1,0 +1,67 @@
+{
+  "app_name": "Robo - Privacy-First Windows Desktop Companion",
+  "app_type": "hybrid_fullstack desktop companion (Tauri shell + React frontend)",
+  "emotional_tone": "Calm, intelligent, trustworthy, autonomous, reassuring",
+  "archetype": "ORGANIC & EARTHY meets RETRO-FUTURISTIC TERMINAL",
+  "typography": {
+    "heading_font": "JetBrains Mono, monospace",
+    "body_font": "Inter, sans-serif",
+    "hierarchy": {
+      "H1": "text-2xl sm:text-3xl font-bold tracking-tight",
+      "H2": "text-xl sm:text-2xl font-semibold",
+      "H3": "text-lg font-medium",
+      "body": "text-sm sm:text-base leading-relaxed",
+      "small": "text-xs uppercase tracking-wider font-mono"
+    }
+  },
+  "colors": {
+    "primary": "#3B82F6",
+    "primary_hover": "#2563EB",
+    "background_dark": "#0F172A",
+    "background_surface": "rgba(15, 23, 42, 0.85)",
+    "accent_green": "#10B981",
+    "accent_amber": "#F59E0B",
+    "accent_rose": "#F43F5E",
+    "text_primary": "#F8FAFC",
+    "text_muted": "#94A3B8",
+    "border_subtle": "rgba(255, 255, 255, 0.1)"
+  },
+  "surface_strategies": {
+    "companion_surface": "backdrop-blur-xl bg-slate-900/80 border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.3)] rounded-2xl",
+    "glass_panel": "backdrop-blur-md bg-slate-800/60 border border-white/10 rounded-xl"
+  },
+  "grids_and_layouts": {
+    "mode": "Compact Bento Grid for Settings/Status, Floating Widget for Desktop Companion",
+    "spacing": "Generous internal padding (p-4 to p-6) with smooth rounded corners"
+  },
+  "motion": {
+    "library": "Framer Motion",
+    "transitions": "Spring physics for avatar states, smooth fade for panels, hover scale micro-interactions"
+  },
+  "accessibility": {
+    "contrast": "WCAG AA compliant text over dark translucent surfaces",
+    "reduced_motion": "Supported via prefers-reduced-motion media query equivalents",
+    "testing_attributes": "All interactive elements include data-testid attributes"
+  },
+  "image_urls": [
+    {
+      "category": "robo_avatar",
+      "description": "Cute toy robot companion avatar",
+      "url": "https://images.unsplash.com/photo-1659018966820-de07c94e0d01?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2MzR8MHwxfHNlYXJjaHwxfHxkZXNrdG9wJTIwY29tcGFuaW9uJTIwYXZhdGFyJTIwcm9ib3QlMjBjdXRlfGVufDB8fHx8MTc5MDY5MDIyMHww&ixlib=rb-4.1.0&q=85"
+    }
+  ],
+  "instructions_to_main_agent": [
+    "Build a fully interactive desktop companion app with Tauri simulation shell + React frontend.",
+    "Implement transparent borderless always-on-top draggable window behavior.",
+    "Include 2D animated Robo state display (Idle, Focused, Paused, Thinking, Alert).",
+    "Include conservative context detection without screenshots/audio/keylogging (Active window title detection, system idle state, battery/CPU telemetry).",
+    "Implement tray controls simulation, pause/hide/focus mode toggles, and robust local settings storage.",
+    "Ensure all interactive elements have data-testid attributes for testing."
+  ],
+  "UNIVERSAL GUIDELINES FOR MAIN AGENT": [
+    "Avoid generic AI slop: use deep slate-900 glassmorphic surfaces with neon green/blue telemetry accents.",
+    "Ensure all text meets APCA contrast standards against translucent backdrops.",
+    "Never use complete transparent backgrounds on headers or menus with text underneath.",
+    "All interactive elements must include data-testid attributes."
+  ]
+}
